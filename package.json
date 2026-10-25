@@ -1,3 +1,4 @@
+
 {
   "name": "daybook-android-rebuild",
   "version": "1.0.0",
@@ -10,7 +11,9 @@
   "dependencies": {
     "@capacitor/android": "^7.4.3",
     "@capacitor/core": "^7.4.3",
-    "@capacitor/local-notifications": "^7.0.2"
+    "@capacitor/local-notifications": "^7.0.2",
+    "@capacitor/filesystem": "^7.1.4",
+    "@capacitor/share": "^7.0.2"
   },
   "devDependencies": {
     "@capacitor/cli": "^7.4.3",

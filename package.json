@@ -1,0 +1,25 @@
+{
+  "name": "daybook-android-rebuild",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline-first Android wrapper for the uploaded Daybook HTML app",
+  "type": "module",
+  "scripts": {
+    "android:setup": "npm run build:web && node scripts/setup-android.mjs",
+    "android:sync": "cap sync android",
+    "android:build": "npm run android:setup && cd android && ./gradlew assembleDebug",
+    "android:open": "cap open android",
+    "build:web": "esbuild www/native-bridge.js --bundle --format=esm --outfile=www/native-bridge.bundle.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/filesystem": "^7.0.2",
+    "@capacitor/local-notifications": "^7.0.2",
+    "@capacitor/share": "^7.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "esbuild": "^0.25.0"
+  }
+}
